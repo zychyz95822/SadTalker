@@ -44,7 +44,7 @@ def get_source_image(image):
 
 def get_img_from_txt2img(x):
     talker_path = Path(paths.script_path) / "outputs"
-    imgs_from_txt_dir = str("workspace/user_code/00_sd_webui_private_00" / "outputs" / "txt2img-images/")
+    imgs_from_txt_dir = str("workspace" / "user_code" / "00_sd_webui_private_00" / "outputs" / "txt2img-images/")
     imgs = glob.glob(imgs_from_txt_dir+'/*/*.png')
     imgs.sort(key=lambda x:os.path.getmtime(os.path.join(imgs_from_txt_dir, x)))
     img_from_txt_path = os.path.join(imgs_from_txt_dir, imgs[-1])
